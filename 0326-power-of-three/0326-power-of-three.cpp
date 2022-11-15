@@ -13,8 +13,7 @@ public:
             n = n / 3;
         }
         
-        if(n==1) return true;
-        else return false;
+        return n==1;
 
     }
 };
