@@ -63,6 +63,23 @@ public:
         return dp[amount];
     }
     
+    int dp[10010];
+    int fun(vector<int> &coins, int amount){
+
+        if(amount==0)
+            return 0;
+        if(dp[amount]!=-1) return dp[amount];
+
+        int ans=INT_MAX;
+        for(int coin:coins){
+            if(amount-coin>=0){
+                ans = min(ans + 0LL, fun(coins,amount-coin)+1LL);
+            }
+        }
+
+	    return dp[amount]=ans;
+}
+    
     int coinChange(vector<int>& coins, int amount) {
         // Recursive approch
         // int res = solvRec(coins, amount);
@@ -79,8 +96,13 @@ public:
         // return res;
         
         // DP Approch
+        // int res = solveDP(coins, amount);
+        // return res;
         
-        int res = solveDP(coins, amount);
-        return res;
+        
+        memset(dp,-1,sizeof(dp));
+        int ans = fun(coins,amount);
+        return ans==INT_MAX ? -1 : ans;
+        
     }
 };
