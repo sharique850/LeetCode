@@ -5,12 +5,11 @@ public:
         string s1,s2;
         
         for(auto word:word1)
-            s1+=word;
+            s1 = s1 + word;
         for(auto word:word2)
-            s2+=word;
+            s2 = s2 + word;
         
-        if(s1==s2)
-            return true;
+        if(s1==s2) return true;
         return false;
         
     }
