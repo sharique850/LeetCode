@@ -9,8 +9,7 @@ public:
         for(auto word:word2)
             s2 = s2 + word;
         
-        if(s1==s2) return true;
-        return false;
+        return s1==s2;
         
     }
 };
