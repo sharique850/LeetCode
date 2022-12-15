@@ -18,11 +18,5 @@ public:
         if(low%2!=0 || high%2!=0)
             return s+1;
         return s;
-        
-        
-        // int ans= (high-low)/2;
-        // if (low&1 || high&1)ans++;
-        // return ans;
-        
     }
 };
