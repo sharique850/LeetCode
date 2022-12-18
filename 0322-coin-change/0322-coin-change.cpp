@@ -1,67 +1,67 @@
 class Solution {
 public:
     
-    int solvRec(vector<int> &coins, int amount)
-    {
-        // base case
-        if(amount==0)
-            return 0;
-        if(amount<0)
-            return INT_MAX;
+//     int solvRec(vector<int> &coins, int amount)
+//     {
+//         // base case
+//         if(amount==0)
+//             return 0;
+//         if(amount<0)
+//             return INT_MAX;
         
-        // recursive case
-        int mini = INT_MAX;
-        for(int i=0; i<coins.size(); i++){
-            int ans = solvRec(coins, amount-coins[i]);
-            if(ans!=INT_MAX)
-                mini = min(mini, 1+ans);
-        }
-        return mini;
-    }
+//         // recursive case
+//         int mini = INT_MAX;
+//         for(int i=0; i<coins.size(); i++){
+//             int ans = solvRec(coins, amount-coins[i]);
+//             if(ans!=INT_MAX)
+//                 mini = min(mini, 1+ans);
+//         }
+//         return mini;
+//     }
     
-    int solveMemo(vector<int> &coins, int amount, vector<int> &dp)
-    {
-        // base case
-        if(amount==0)
-            return 0;
-        if(amount<0)
-            return INT_MAX;
+//     int solveMemo(vector<int> &coins, int amount, vector<int> &dp)
+//     {
+//         // base case
+//         if(amount==0)
+//             return 0;
+//         if(amount<0)
+//             return INT_MAX;
         
-        // Memoized
-        if(dp[amount]!=-1)
-            return dp[amount];
+//         // Memoized
+//         if(dp[amount]!=-1)
+//             return dp[amount];
         
-        // recursive case
-        int mini = INT_MAX;
-        for(int i=0; i<coins.size(); i++){
-            int ans = solvRec(coins, amount-coins[i]);
-            if(ans!=INT_MAX)
-                mini = min(mini, 1+ans);
-        }
+//         // recursive case
+//         int mini = INT_MAX;
+//         for(int i=0; i<coins.size(); i++){
+//             int ans = solvRec(coins, amount-coins[i]);
+//             if(ans!=INT_MAX)
+//                 mini = min(mini, 1+ans);
+//         }
         
-        dp[amount]=mini;
-        return mini;
-    }
+//         dp[amount]=mini;
+//         return mini;
+//     }
     
     
-    int solveDP(vector<int> &coins, int amount)
-    {
-        vector<int> dp(amount+1, INT_MAX);
-        dp[0]=0;
+//     int solveDP(vector<int> &coins, int amount)
+//     {
+//         vector<int> dp(amount+1, INT_MAX);
+//         dp[0]=0;
         
-        for(int i=1;i<=amount;i++)
-        {
-            for(int j=0;j<coins.size();j++)
-            {
-                if(i-coins[j]>=0 && dp[i-coins[j]]!=INT_MAX)
-                    dp[i] = min(dp[i] , 1 + dp[i-coins[j]]);
-            }
-        }
+//         for(int i=1;i<=amount;i++)
+//         {
+//             for(int j=0;j<coins.size();j++)
+//             {
+//                 if(i-coins[j]>=0 && dp[i-coins[j]]!=INT_MAX)
+//                     dp[i] = min(dp[i] , 1 + dp[i-coins[j]]);
+//             }
+//         }
         
-        if(dp[amount]==INT_MAX)
-            return -1;
-        return dp[amount];
-    }
+//         if(dp[amount]==INT_MAX)
+//             return -1;
+//         return dp[amount];
+//     }
     
     int dp[10010];
     int fun(vector<int> &coins, int amount){
