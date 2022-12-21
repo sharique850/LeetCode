@@ -7,21 +7,21 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre style="position: relative;"><strong>Input:</strong> x = 3, y = 4, points = [[1,2],[3,1],[2,4],[2,3],[4,4]]
+<pre><strong>Input:</strong> x = 3, y = 4, points = [[1,2],[3,1],[2,4],[2,3],[4,4]]
 <strong>Output:</strong> 2
-<strong>Explanation:</strong> Of all the points, only [3,1], [2,4] and [4,4] are valid. Of the valid points, [2,4] and [4,4] have the smallest Manhattan distance from your current location, with a distance of 1. [2,4] has the smallest index, so return 2.<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+<strong>Explanation:</strong> Of all the points, only [3,1], [2,4] and [4,4] are valid. Of the valid points, [2,4] and [4,4] have the smallest Manhattan distance from your current location, with a distance of 1. [2,4] has the smallest index, so return 2.</pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre style="position: relative;"><strong>Input:</strong> x = 3, y = 4, points = [[3,4]]
+<pre><strong>Input:</strong> x = 3, y = 4, points = [[3,4]]
 <strong>Output:</strong> 0
-<strong>Explanation:</strong> The answer is allowed to be on the same location as your current location.<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+<strong>Explanation:</strong> The answer is allowed to be on the same location as your current location.</pre>
 
 <p><strong class="example">Example 3:</strong></p>
 
-<pre style="position: relative;"><strong>Input:</strong> x = 3, y = 4, points = [[2,3]]
+<pre><strong>Input:</strong> x = 3, y = 4, points = [[2,3]]
 <strong>Output:</strong> -1
-<strong>Explanation:</strong> There are no valid points.<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+<strong>Explanation:</strong> There are no valid points.</pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
